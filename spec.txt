@@ -1,0 +1,18 @@
+=== INSTRUCTIONS ===
+- PUSH
+- POP
+- ADD
+- SUB
+- MULT
+- DIV
+
+=== REGISTERS ===
+A: INSTRUCTIONS (instruction)
+B: VALUE (vector)
+C: OUTPUT (int)
+D: ERROR (int)
+
+=== ERRORS ===
+1: Divion by 0
+2: SUB more than 2 elements
+3: DIV more than 2 elements
