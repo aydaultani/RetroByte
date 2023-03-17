@@ -1,12 +1,15 @@
+#pragma once
+
 #include "instruction.hpp"
 #include "vector"
 #include <iostream>
 
-void execute(std::vector<Instruction> &reg_A, std::vector<int> &reg_B, int &reg_C, int &reg_D, bool stacktrace)
-{
-    if (stacktrace) std::cout << "========================\n";
-    if (stacktrace) std::cout << "=== STACKTRACE BEGIN ===\n";
-    if (stacktrace) std::cout << "========================\n";
+void execute(std::vector<Instruction> &reg_A, std::vector<int> &reg_B, int &reg_C, int &reg_D, bool stacktrace) {
+    if (stacktrace) {
+        std::cout << "========================\n";
+        std::cout << "=== STACKTRACE BEGIN ===\n";
+        std::cout << "========================\n";
+    }
     for (int i = 0; i < reg_A.size(); i++)
     {
         switch(reg_A[i].type) {
@@ -74,7 +77,12 @@ void execute(std::vector<Instruction> &reg_A, std::vector<int> &reg_B, int &reg_
             }
         };
     }
+    if (stacktrace) {
+        std::cout << "======================\n";
+        std::cout << "=== STACKTRACE END ===\n";
+    }
+    if (stacktrace) {
+    if (stacktrace) 
     if (stacktrace) std::cout << "======================\n";
-    if (stacktrace) std::cout << "=== STACKTRACE END ===\n";
-    if (stacktrace) std::cout << "======================\n";
+}
 }

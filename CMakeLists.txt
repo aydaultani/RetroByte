@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.10)
 set (CMAKE_CXX_STANDARD 17)
 project(RetroByte)
-add_executable(RetroByte main.cpp)
+add_executable(RetroByte main.cpp error.hpp execute.hpp instruction.hpp)
